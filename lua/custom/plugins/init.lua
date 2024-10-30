@@ -17,4 +17,33 @@ return {
       require('typst-preview').update()
     end,
   },
+  {
+    'declancm/cinnamon.nvim',
+    config = function()
+      require('cinnamon').setup {
+        keymaps = {
+          basic = true,
+          extra = true,
+        },
+      }
+    end,
+  },
+  {
+    'petertriho/nvim-scrollbar',
+    config = function()
+      require('scrollbar').setup()
+    end,
+  },
+  {
+    'akinsho/bufferline.nvim',
+    version = '*',
+    dependencies = 'nvim-tree/nvim-web-devicons',
+    config = function()
+      require('bufferline').setup {
+        options = {
+          always_show_bufferline = true,
+        },
+      }
+    end,
+  },
 }
