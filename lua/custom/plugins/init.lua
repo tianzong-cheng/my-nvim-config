@@ -6,7 +6,7 @@ return {
   {
     'github/copilot.vim',
     config = function()
-      vim.g.copilot_filetypes = { markdown = false }
+      vim.g.copilot_filetypes = { markdown = false, typst = false }
     end,
   },
   {
@@ -79,5 +79,8 @@ return {
       require('dashboard').setup {}
     end,
     dependencies = { { 'nvim-tree/nvim-web-devicons' } },
+  },
+  {
+    'nvim-treesitter/nvim-treesitter-context',
   },
 }
