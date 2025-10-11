@@ -102,7 +102,7 @@ vim.g.have_nerd_font = true
 vim.o.number = true
 -- You can also add relative line numbers, to help with jumping.
 --  Experiment for yourself to see if you like it!
-vim.opt.relativenumber = true
+vim.o.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.o.mouse = 'a'
@@ -159,10 +159,10 @@ vim.o.inccommand = 'split'
 vim.o.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 5
+vim.o.scrolloff = 5
 
 -- Enables spell check
-vim.opt.spell = true
+vim.o.spell = true
 
 -- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
 -- instead raise a dialog asking if you wish to save the current file(s)
@@ -774,7 +774,7 @@ require('lazy').setup({
         c = { 'clang-format' },
         cpp = { 'clang-format' },
         -- Conform can also run multiple formatters sequentially
-        python = { 'black' },
+        python = { 'isort', 'black' },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
         -- javascript = { "prettierd", "prettier", stop_after_first = true },
